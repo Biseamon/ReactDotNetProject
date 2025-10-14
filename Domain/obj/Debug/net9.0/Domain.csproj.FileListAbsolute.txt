@@ -1,0 +1,11 @@
+/Users/marincapranov/Desktop/TestApp/ReactDotNetApp/Domain/bin/Debug/net9.0/Domain.deps.json
+/Users/marincapranov/Desktop/TestApp/ReactDotNetApp/Domain/bin/Debug/net9.0/Domain.dll
+/Users/marincapranov/Desktop/TestApp/ReactDotNetApp/Domain/bin/Debug/net9.0/Domain.pdb
+/Users/marincapranov/Desktop/TestApp/ReactDotNetApp/Domain/obj/Debug/net9.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/marincapranov/Desktop/TestApp/ReactDotNetApp/Domain/obj/Debug/net9.0/Domain.AssemblyInfoInputs.cache
+/Users/marincapranov/Desktop/TestApp/ReactDotNetApp/Domain/obj/Debug/net9.0/Domain.AssemblyInfo.cs
+/Users/marincapranov/Desktop/TestApp/ReactDotNetApp/Domain/obj/Debug/net9.0/Domain.csproj.CoreCompileInputs.cache
+/Users/marincapranov/Desktop/TestApp/ReactDotNetApp/Domain/obj/Debug/net9.0/Domain.dll
+/Users/marincapranov/Desktop/TestApp/ReactDotNetApp/Domain/obj/Debug/net9.0/refint/Domain.dll
+/Users/marincapranov/Desktop/TestApp/ReactDotNetApp/Domain/obj/Debug/net9.0/Domain.pdb
+/Users/marincapranov/Desktop/TestApp/ReactDotNetApp/Domain/obj/Debug/net9.0/ref/Domain.dll
