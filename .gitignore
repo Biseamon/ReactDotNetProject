@@ -1,0 +1,103 @@
+## Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+[Tt]emp/
+[Tt]est[Rr]esult*/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.log
+*.user
+*.suo
+*.userosscache
+*.userprefs
+
+## Visual Studio / JetBrains / VS Code
+.vs/
+.idea/
+.vscode/
+*.swp
+*.sln.docstates
+
+## Packages
+*.nupkg
+*.snupkg
+*.nuspec
+*.psess
+*.vsp
+*.vspscc
+packages/
+!**/packages/build/
+!**/packages/repositories.config
+
+## .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.deps.json
+*.runtimeconfig.json
+
+## Publish output
+publish/
+dist/
+out/
+wwwroot/dist/
+wwwroot/node_modules/
+wwwroot/build/
+node_modules/
+
+## Docker / Containers
+docker-compose.override.yml
+*.pid
+.env
+.env.*
+*.db
+*.sqlite
+
+## Logs / Data
+*.log
+*.sql
+*.sqlite3
+*.db
+*.bak
+*.tmp
+*.temp
+dump.rdb
+
+## Secrets / Config
+appsettings.Development.json
+appsettings.Local.json
+appsettings.*.secrets.json
+secrets.json
+
+## OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+## Unit test results
+TestResult.xml
+*.coverage
+*.coveragexml
+*.trx
+
+## Rider / ReSharper
+_ReSharper*/
+*.DotSettings.user
+.idea/
+.idea_modules/
+
+## Others
+*.orig
+*.rej
+*.swp
+*.bak
+*.old
