@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PGNdqFSRZMU=",
+  "dgSpecHash": "Rkp9zdM5/1s=",
   "success": true,
-  "projectFilePath": "/Users/marincapranov/Desktop/TestApp/ReactDotNetApp/Persistance/Persistance.csproj",
+  "projectFilePath": "/Users/marincapranov/Desktop/TestApp/ReactDotNetProject/Persistance/Persistance.csproj",
   "expectedPackageFiles": [
     "/Users/marincapranov/.nuget/packages/microsoft.data.sqlite.core/9.0.0/microsoft.data.sqlite.core.9.0.0.nupkg.sha512",
     "/Users/marincapranov/.nuget/packages/microsoft.entityframeworkcore/9.0.0/microsoft.entityframeworkcore.9.0.0.nupkg.sha512",

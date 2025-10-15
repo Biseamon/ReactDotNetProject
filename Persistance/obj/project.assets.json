@@ -1134,11 +1134,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/marincapranov/Desktop/TestApp/ReactDotNetApp/Persistance/Persistance.csproj",
+      "projectUniqueName": "/Users/marincapranov/Desktop/TestApp/ReactDotNetProject/Persistance/Persistance.csproj",
       "projectName": "Persistance",
-      "projectPath": "/Users/marincapranov/Desktop/TestApp/ReactDotNetApp/Persistance/Persistance.csproj",
+      "projectPath": "/Users/marincapranov/Desktop/TestApp/ReactDotNetProject/Persistance/Persistance.csproj",
       "packagesPath": "/Users/marincapranov/.nuget/packages/",
-      "outputPath": "/Users/marincapranov/Desktop/TestApp/ReactDotNetApp/Persistance/obj/",
+      "outputPath": "/Users/marincapranov/Desktop/TestApp/ReactDotNetProject/Persistance/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/marincapranov/.nuget/NuGet/NuGet.Config"
@@ -1153,8 +1153,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "/Users/marincapranov/Desktop/TestApp/ReactDotNetApp/Domain/Domain.csproj": {
-              "projectPath": "/Users/marincapranov/Desktop/TestApp/ReactDotNetApp/Domain/Domain.csproj"
+            "/Users/marincapranov/Desktop/TestApp/ReactDotNetProject/Domain/Domain.csproj": {
+              "projectPath": "/Users/marincapranov/Desktop/TestApp/ReactDotNetProject/Domain/Domain.csproj"
             }
           }
         }

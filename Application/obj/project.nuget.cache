@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VfZTWDNdSyY=",
+  "dgSpecHash": "F0CBtHCItgI=",
   "success": true,
-  "projectFilePath": "/Users/marincapranov/Desktop/TestApp/ReactDotNetApp/Application/Application.csproj",
+  "projectFilePath": "/Users/marincapranov/Desktop/TestApp/ReactDotNetProject/Application/Application.csproj",
   "expectedPackageFiles": [
     "/Users/marincapranov/.nuget/packages/microsoft.data.sqlite.core/9.0.0/microsoft.data.sqlite.core.9.0.0.nupkg.sha512",
     "/Users/marincapranov/.nuget/packages/microsoft.entityframeworkcore/9.0.0/microsoft.entityframeworkcore.9.0.0.nupkg.sha512",

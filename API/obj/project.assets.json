@@ -3140,11 +3140,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/marincapranov/Desktop/TestApp/ReactDotNetApp/API/API.csproj",
+      "projectUniqueName": "/Users/marincapranov/Desktop/TestApp/ReactDotNetProject/API/API.csproj",
       "projectName": "API",
-      "projectPath": "/Users/marincapranov/Desktop/TestApp/ReactDotNetApp/API/API.csproj",
+      "projectPath": "/Users/marincapranov/Desktop/TestApp/ReactDotNetProject/API/API.csproj",
       "packagesPath": "/Users/marincapranov/.nuget/packages/",
-      "outputPath": "/Users/marincapranov/Desktop/TestApp/ReactDotNetApp/API/obj/",
+      "outputPath": "/Users/marincapranov/Desktop/TestApp/ReactDotNetProject/API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/marincapranov/.nuget/NuGet/NuGet.Config"
@@ -3159,8 +3159,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "/Users/marincapranov/Desktop/TestApp/ReactDotNetApp/Application/Application.csproj": {
-              "projectPath": "/Users/marincapranov/Desktop/TestApp/ReactDotNetApp/Application/Application.csproj"
+            "/Users/marincapranov/Desktop/TestApp/ReactDotNetProject/Application/Application.csproj": {
+              "projectPath": "/Users/marincapranov/Desktop/TestApp/ReactDotNetProject/Application/Application.csproj"
             }
           }
         }
