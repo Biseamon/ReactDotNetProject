@@ -292,3 +292,4 @@
 /Users/marincapranov/Desktop/TestApp/ReactDotNetProject/API/obj/Debug/net9.0/API.pdb
 /Users/marincapranov/Desktop/TestApp/ReactDotNetProject/API/obj/Debug/net9.0/API.genruntimeconfig.cache
 /Users/marincapranov/Desktop/TestApp/ReactDotNetProject/API/obj/Debug/net9.0/ref/API.dll
+/Users/marincapranov/Desktop/TestApp/ReactDotNetProject/API/obj/Debug/net9.0/API.sourcelink.json
