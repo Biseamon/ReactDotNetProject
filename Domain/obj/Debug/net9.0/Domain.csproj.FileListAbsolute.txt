@@ -20,3 +20,4 @@
 /Users/marincapranov/Desktop/TestApp/ReactDotNetProject/Domain/obj/Debug/net9.0/refint/Domain.dll
 /Users/marincapranov/Desktop/TestApp/ReactDotNetProject/Domain/obj/Debug/net9.0/Domain.pdb
 /Users/marincapranov/Desktop/TestApp/ReactDotNetProject/Domain/obj/Debug/net9.0/ref/Domain.dll
+/Users/marincapranov/Desktop/TestApp/ReactDotNetProject/Domain/obj/Debug/net9.0/Domain.sourcelink.json
