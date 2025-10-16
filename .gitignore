@@ -485,4 +485,10 @@ $RECYCLE.BIN/
 API/appsettings.json
 API/reactivities.db
 API/reactivities.db-shm
+# Build folders
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+
 .gitignore
