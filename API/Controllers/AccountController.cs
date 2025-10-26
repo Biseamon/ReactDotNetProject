@@ -35,7 +35,7 @@ namespace API.Controllers
 
         [AllowAnonymous]
         [HttpGet("user-info")]
-        public async Task<ActionResult> GetUserInfor()
+        public async Task<ActionResult> GetUserInfo()
         {
             if (User.Identity?.IsAuthenticated == false)
             {
@@ -55,6 +55,7 @@ namespace API.Controllers
             });
         }
 
+        [HttpPost("logout")]
         public async Task<ActionResult> Logout()
         {
             await signInManager.SignOutAsync();
