@@ -1,52 +1,30 @@
-import { Box, Typography, Card, CardContent, TextField, Avatar } from "@mui/material";
-import { Link } from "react-router";
+import { Grid2, Typography } from "@mui/material"
+import { useParams } from "react-router";
+import { useActivities } from "../../../lib/hooks/useActivities";
+import ActivityDetailsHeader from "./ActivityDetailsHeader";
+import ActivityDetailInfo from "./ActivityDetailsInfo";
+import ActivityDetailsChat from "./ActivityDetailsChat";
+import ActivityDetailsSidebar from "./ActivityDetailsSidebar";
 
-export default function ActivityDetailsChat() {
+
+export default function ActivityDetailPage() {
+    const {id} = useParams();
+    const {activity, isLoadingActivity} = useActivities(id);
+
+    if (isLoadingActivity) return <Typography>Loading...</Typography>
+
+    if (!activity) return <Typography>Activity not found</Typography>
+
     return (
-        <>
-            <Box
-                sx={{
-                    textAlign: 'center',
-                    bgcolor: 'primary.main',
-                    color: 'white',
-                    padding: 2
-                }}
-            >
-                <Typography variant="h6">Chat about this event</Typography>
-            </Box>
-            <Card>
-                <CardContent>
-                    <div>
-                        <form>
-                            <TextField
-                                variant="outlined"
-                                fullWidth
-                                multiline
-                                rows={2}
-                                placeholder="Enter your comment (Enter to submit, SHIFT + Enter for new line)"
-                            />
-                        </form>
-                    </div>
-
-                    <Box>
-                        <Box sx={{ display: 'flex', my: 2 }}>
-                            <Avatar src={'/images/user.png'} alt={'user image'} sx={{ mr: 2 }} />
-                            <Box display='flex' flexDirection='column'>
-                                <Box display='flex' alignItems='center' gap={3}>
-                                    <Typography component={Link} to={`/profiles/username`} variant="subtitle1" sx={{ fontWeight: 'bold', textDecoration: 'none' }}>
-                                        Bob
-                                    </Typography>
-                                    <Typography variant="body2" color="textSecondary">
-                                        2 hours ago
-                                    </Typography>
-                                </Box>
-
-                                <Typography sx={{ whiteSpace: 'pre-wrap' }}>Comment goes here</Typography>
-                            </Box>
-                        </Box>
-                    </Box>
-                </CardContent>
-            </Card>
-        </>
+        <Grid2 container spacing={3}>
+            <Grid2 size={8}>
+                <ActivityDetailsHeader activity={activity} />
+                <ActivityDetailInfo activity={activity} />
+                <ActivityDetailsChat />
+            </Grid2>
+            <Grid2 size={4}>
+                <ActivityDetailsSidebar />
+            </Grid2>
+        </Grid2>
     )
 }

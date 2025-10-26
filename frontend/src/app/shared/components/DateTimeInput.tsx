@@ -1,5 +1,5 @@
-import { type FieldValues, useController, type UseControllerProps } from "react-hook-form"
-import {DateTimePicker, type DateTimePickerProps} from '@mui/x-date-pickers';
+import { FieldValues, useController, UseControllerProps } from "react-hook-form"
+import {DateTimePicker, DateTimePickerProps} from '@mui/x-date-pickers';
 
 type Props<T extends FieldValues> = {} & UseControllerProps<T> & DateTimePickerProps<Date>
 
