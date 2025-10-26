@@ -1,11 +1,11 @@
 
 import { useActivities } from "../../../lib/hooks/useActivities";
 
-import ActivityDetailHeader from "./ActivityDetailHeader";
-import ActivityDetailInfo from "./ActivityDetailInfo";
+import ActivityDetailHeader from "./ActivityDetailsHeader";
+import ActivityDetailInfo from "./ActivityDetailsInfo";
 import ActivityDetailChat from "./ActivityDetailChat";
 import { Grid2, Typography } from "@mui/material";
-import ActivityDetailSidebar from "./ActivityDetailSidebar";
+import ActivityDetailSidebar from "./ActivityDetailsSidebar";
 import { useParams } from "react-router";
 
 
