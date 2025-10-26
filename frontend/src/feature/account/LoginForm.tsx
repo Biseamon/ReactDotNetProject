@@ -20,6 +20,7 @@ export default function LoginForm() {
         await loginUser.mutateAsync(data, {
             onSuccess: () => {
                 navigate(location.state?.from || '/activities');
+                console.log(`redirect to: ${JSON.stringify(location.state?.from)}`)
             }
         });
     }

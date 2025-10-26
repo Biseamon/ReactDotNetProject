@@ -1,10 +1,10 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query"
+import { LoginSchema } from "../schemas/loginSchema"
+import agent from "../api/agent"
 import { useLocation, useNavigate } from "react-router";
-import agent from "../api/agent";
+import { RegisterSchema } from "../schemas/registerSchema";
 import { toast } from "react-toastify";
 import { User } from "../types";
-import { LoginSchema } from "../schemas/loginSchema";
-import { RegisterSchema } from "../schemas/registerSchema";
 
 export const useAccount = () => {
     const queryClient = useQueryClient();
@@ -13,15 +13,12 @@ export const useAccount = () => {
 
     const loginUser = useMutation({
         mutationFn: async (creds: LoginSchema) => {
-            await agent.post('login?userCookies=true', creds);
+            await agent.post('/login?useCookies=true', creds);
         },
         onSuccess: async () => {
             await queryClient.invalidateQueries({
                 queryKey: ['user']
             });
-        },
-        onError: async (error) => {
-            console.log("Error is " + error);
         }
     });
 
@@ -33,7 +30,7 @@ export const useAccount = () => {
             toast.success('Register successful - you can now login');
             navigate('/login');
         }
-    });
+    })
 
     const logoutUser = useMutation({
         mutationFn: async () => {
@@ -41,7 +38,7 @@ export const useAccount = () => {
         },
         onSuccess: () => {
             queryClient.removeQueries({queryKey: ['user']});
-            queryClient.refetchQueries({queryKey: ['activities']});
+            queryClient.removeQueries({queryKey: ['activities']});
             navigate('/');
         }
     })
@@ -52,9 +49,9 @@ export const useAccount = () => {
             const response = await agent.get<User>('/account/user-info');
             return response.data;
         },
-        enabled: !queryClient.getQueryData(['user'])
-        && location.pathname !== '/login'
-        && location.pathname !== '/register'
+        enabled: !queryClient.getQueryData(['user']) 
+            && location.pathname !== '/login'
+            && location.pathname !== '/register'
     })
 
     return {
