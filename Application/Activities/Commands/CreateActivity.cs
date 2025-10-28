@@ -17,11 +17,12 @@ public class CreateActivity
         public required CreateActivityDto ActivityDto { get; set; }
     }
 
-    public class Handler(AppDbContext context, IMapper mapper, IUserAccessor accessor) : IRequestHandler<Command, Result<string>>
+    public class Handler(AppDbContext context, IMapper mapper, IUserAccessor userAccessor) 
+        : IRequestHandler<Command, Result<string>>
     {
         public async Task<Result<string>> Handle(Command request, CancellationToken cancellationToken)
         {
-            var user = await accessor.GetUserAsync();
+            var user = await userAccessor.GetUserAsync();
 
             var activity = mapper.Map<Activity>(request.ActivityDto);
 
