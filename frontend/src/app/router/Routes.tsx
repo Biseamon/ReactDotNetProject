@@ -21,7 +21,7 @@ export const router = createBrowserRouter([
             {element: <RequireAuth />, children: [
                 {path: 'activities', element: <ActivityDashboard />},
                 {path: 'activities/:id', element: <ActivityDetailPage />},
-                {path: 'createActivity', element: <ActivityForm />},
+                {path: 'createActivity', element: <ActivityForm key='create'/>},
                 {path: 'manage/:id', element: <ActivityForm />},
                 { path: 'profiles/:id', element: <ProfilePage /> },
             ]},
