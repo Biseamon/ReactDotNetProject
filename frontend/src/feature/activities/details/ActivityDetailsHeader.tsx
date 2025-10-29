@@ -51,7 +51,7 @@ export default function ActivityDetailsHeader({activity}: Props) {
                         </Link>
                     </Typography>
                 </Box>
-
+                
                 {/* Buttons aligned to the right */}
                 <Box sx={{ display: 'flex', gap: 2 }}>
                     {activity.isHost ? (
