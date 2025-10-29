@@ -10,6 +10,7 @@ import ServerError from "../../feature/errors/ServerError";
 import RequireAuth from "./RequireAuth";
 import LoginForm from "../../feature/account/LoginForm";
 import RegisterForm from "../../feature/account/RegisterForm";
+import ProfilePage from "../../feature/profiles/ProfilePage";
 
 
 export const router = createBrowserRouter([
@@ -21,7 +22,8 @@ export const router = createBrowserRouter([
                 {path: 'activities', element: <ActivityDashboard />},
                 {path: 'activities/:id', element: <ActivityDetailPage />},
                 {path: 'createActivity', element: <ActivityForm />},
-                {path: 'manage/:id', element: <ActivityForm />}
+                {path: 'manage/:id', element: <ActivityForm />},
+                { path: 'profiles/:id', element: <ProfilePage /> },
             ]},
             { path: 'counter', element: <Counter /> },
             { path: 'errors', element: <TestErrors /> },
