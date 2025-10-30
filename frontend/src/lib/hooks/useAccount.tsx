@@ -54,11 +54,34 @@ export const useAccount = () => {
             && location.pathname !== '/register'
     })
 
+    const verifyEmail = useMutation({
+        mutationFn: async ({userId, code}: {userId: string, code: string}) => {
+            await agent.get(`/confirmEmail?userId=${userId}&code=${code}`)
+        }
+    });
+
+    const resendConfirmationEmail = useMutation({
+        mutationFn: async ({email, userId}:{email?: string, userId?: string | null}) => {
+            await agent.get(`/account/resendConfirmEmail`, {
+                params: {
+                    email,
+                    userId
+                }
+            })
+        },
+        onSuccess: () => {
+            toast.success('Email sent - please check your email');
+        }
+    })
+
+
     return {
         loginUser,
         currentUser,
         logoutUser,
         loadingUserInfo,
-        registerUser
+        registerUser,
+        verifyEmail,
+        resendConfirmationEmail
     }
 }
