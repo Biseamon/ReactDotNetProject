@@ -11,6 +11,8 @@ import RequireAuth from "./RequireAuth";
 import LoginForm from "../../feature/account/LoginForm";
 import RegisterForm from "../../feature/account/RegisterForm";
 import ProfilePage from "../../feature/profiles/ProfilePage";
+import ForgotPasswordForm from "../../feature/account/ForgotPasswordForm";
+import ResetPasswordForm from "../../feature/account/ResetPasswordForm";
 
 
 export const router = createBrowserRouter([
@@ -31,6 +33,8 @@ export const router = createBrowserRouter([
             { path: 'server-error', element: <ServerError /> },
             { path: 'login', element: <LoginForm /> },
             { path: 'register', element: <RegisterForm /> },
+            { path: 'forgot-password', element: <ForgotPasswordForm /> },
+            { path: 'reset-password', element: <ResetPasswordForm /> },
             { path: '*', element: <Navigate replace to='/not-found' /> },
         ]
     }
