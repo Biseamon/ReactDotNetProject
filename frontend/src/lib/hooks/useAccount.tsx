@@ -1,15 +1,24 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query"
 import { LoginSchema } from "../schemas/loginSchema"
 import agent from "../api/agent"
-import { useLocation, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import { RegisterSchema } from "../schemas/registerSchema";
 import { toast } from "react-toastify";
-import { User } from "../types";
+import { ResetPassword, User } from "../types";
+import { ChangePasswordSchema } from "../schemas/changePasswordSchema";
 
 export const useAccount = () => {
     const queryClient = useQueryClient();
     const navigate = useNavigate();
-    const location = useLocation();
+
+    const {data: currentUser, isLoading: loadingUserInfo} = useQuery({
+        queryKey: ['user'],
+        queryFn: async () => {
+            const response = await agent.get<User>('/account/user-info');
+            return response.data;
+        },
+        enabled: !queryClient.getQueryData(['user']) 
+    })
 
     const loginUser = useMutation({
         mutationFn: async (creds: LoginSchema) => {
@@ -25,10 +34,6 @@ export const useAccount = () => {
     const registerUser = useMutation({
         mutationFn: async (creds: RegisterSchema) => {
             await agent.post('/account/register', creds)
-        },
-        onSuccess: () => {
-            toast.success('Register successful - you can now login');
-            navigate('/login');
         }
     })
 
@@ -43,17 +48,6 @@ export const useAccount = () => {
         }
     })
 
-    const {data: currentUser, isLoading: loadingUserInfo} = useQuery({
-        queryKey: ['user'],
-        queryFn: async () => {
-            const response = await agent.get<User>('/account/user-info');
-            return response.data;
-        },
-        enabled: !queryClient.getQueryData(['user']) 
-            && location.pathname !== '/login'
-            && location.pathname !== '/register'
-    })
-
     const verifyEmail = useMutation({
         mutationFn: async ({userId, code}: {userId: string, code: string}) => {
             await agent.get(`/confirmEmail?userId=${userId}&code=${code}`)
@@ -61,7 +55,7 @@ export const useAccount = () => {
     });
 
     const resendConfirmationEmail = useMutation({
-        mutationFn: async ({email, userId}:{email?: string, userId?: string | null}) => {
+        mutationFn: async ({email, userId} :{email?: string, userId?: string | null}) => {
             await agent.get(`/account/resendConfirmEmail`, {
                 params: {
                     email,
@@ -74,6 +68,23 @@ export const useAccount = () => {
         }
     })
 
+    const changePassword = useMutation({
+        mutationFn: async (data: ChangePasswordSchema) => {
+            await agent.post('/account/change-password', data);
+        }
+    });
+
+    const forgotPassword = useMutation({
+        mutationFn: async (email: string) => {
+            await agent.post('/forgotPassword', {email})
+        }
+    })
+
+    const resetPassword = useMutation({
+        mutationFn: async (data: ResetPassword) => {
+            await agent.post('/resetPassword', data);
+        }
+    })
 
     return {
         loginUser,
@@ -82,6 +93,9 @@ export const useAccount = () => {
         loadingUserInfo,
         registerUser,
         verifyEmail,
-        resendConfirmationEmail
+        resendConfirmationEmail,
+        changePassword,
+        forgotPassword,
+        resetPassword
     }
 }
